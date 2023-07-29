@@ -1,5 +1,11 @@
+import Header from "./Header";
+
 const RESTCountriesAPI = () => {
-  return <div> Res</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default RESTCountriesAPI;

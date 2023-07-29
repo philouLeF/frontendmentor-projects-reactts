@@ -1,16 +1,19 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RESTCountriesAPI from "./projects/RESTCountriesAPI/RESTCountriesAPI";
 import Home from "./Home";
 
-function App() {
-  return (
+import RESTCountriesAPI from "./projects/RESTCountriesAPI/RESTCountriesAPI";
+import { DarkModeProvider } from "./dark-mode/DarkModeProvider";
+
+const App: React.FC = () => (
+  <DarkModeProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rest-countries-api" element={<RESTCountriesAPI />} />
       </Routes>
     </Router>
-  );
-}
+  </DarkModeProvider>
+);
 
 export default App;
