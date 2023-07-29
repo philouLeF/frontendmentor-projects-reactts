@@ -1,10 +1,15 @@
-import Header from "./Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RESTCountriesAPI from "./projects/RESTCountriesAPI/RESTCountriesAPI";
+import Home from "./Home";
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rest-countries-api" element={<RESTCountriesAPI />} />
+      </Routes>
+    </Router>
   );
 }
 
