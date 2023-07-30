@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <header className={darkMode ? "dark" : ""}>
       <h1 className="bg-black dark:bg-white">Where in the world?</h1>
-      <button onClick={toggleDarkMode}>Switch</button>
+      <button onClick={toggleDarkMode}>Dark Mode</button>
     </header>
   );
 };
