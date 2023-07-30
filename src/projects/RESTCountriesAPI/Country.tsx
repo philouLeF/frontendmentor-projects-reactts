@@ -18,7 +18,7 @@ type CountryProps = {
 
 const Country: React.FC<CountryProps> = ({ country }) => {
   return (
-    <Link to={`/country/${country.cca3}`}>
+    <Link to={`/rest-countries-api/country/${country.cca3}`}>
       <div>
         <img src={country.flags.png} alt={country.name.common} />
         <h2>{country.name.common}</h2>

@@ -30,7 +30,7 @@ type Country = {
 
 const CountryDetails: React.FC = () => {
   const [country, setCountry] = useState<Country | null>(null);
-  const { cca3 } = useParams();
+  const { cca3 } = useParams<{ cca3: string }>();
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/alpha/${cca3}`)
